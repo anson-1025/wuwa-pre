@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="鸣潮最新版本前瞻内容汇总 - 3.5「遗音扶剑 荡梦而歌」">
+  <title>鸣潮 v3.5 前瞻 | Wuthering Waves Version Preview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ========== 顶部导航栏 ========== -->
+  <nav id="topNav" class="top-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">鸣潮前瞻</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#highlights">核心速览</a></li>
+        <li><a href="#resonators">角色</a></li>
+        <li><a href="#weapons">武器</a></li>
+        <li><a href="#events">活动</a></li>
+        <li><a href="#story">剧情&地图</a></li>
+        <li><a href="#optimizations">优化</a></li>
+        <li><a href="#timeline">时间线</a></li>
+        <li><a href="#sources">来源</a></li>
+      </ul>
+      <button id="navToggle" class="nav-toggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- 移动端下拉菜单 -->
+    <div id="mobileMenu" class="mobile-menu">
+      <ul>
+        <li><a href="#highlights">核心速览</a></li>
+        <li><a href="#resonators">角色</a></li>
+        <li><a href="#weapons">武器</a></li>
+        <li><a href="#events">活动</a></li>
+        <li><a href="#story">剧情&地图</a></li>
+        <li><a href="#optimizations">优化</a></li>
+        <li><a href="#timeline">时间线</a></li>
+        <li><a href="#sources">来源</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== 工具栏 ========== -->
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <button id="btnHighlightsOnly" class="tool-btn" title="一键只看重点">
+        <span class="btn-icon">⭐</span>
+        <span class="btn-label">只看重点</span>
+      </button>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="搜索活动/角色..." class="search-input">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-filter="all">全部</button>
+        <button class="chip" data-filter="战斗">⚔️ 战斗</button>
+        <button class="chip" data-filter="探索">🗺️ 探索</button>
+        <button class="chip" data-filter="收集">📷 收集</button>
+        <button class="chip" data-filter="签到">🎁 签到</button>
+        <button class="chip" data-filter="高难挑战">💀 高难</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- ========== HERO 区 ========== -->
+    <section id="hero" class="section-hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="version-badge">
+          <span class="ver-label">Version</span>
+          <span class="ver-number" id="verNumber">3.5</span>
+        </div>
+        <h1 class="hero-title" id="heroTitle">遗音扶剑 荡梦而歌</h1>
+        <p class="hero-subtitle" id="heroSubtitle">Blade of Past Resounds, Lingering Dream Hymns</p>
+        <div class="hero-meta">
+          <span class="meta-item">📅 上线日期：<strong id="heroDate">2026-07-10</strong></span>
+          <span class="meta-item">🖥️ 平台：<strong id="heroPlatform">PC / iOS / Android / Xbox</strong></span>
+        </div>
+        <div class="hero-tags" id="heroTags">
+          <!-- JS 动态渲染 -->
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>▼ 滚动探索</span>
+      </div>
+    </section>
+
+    <!-- ========== KEY HIGHLIGHTS ========== -->
+    <section id="highlights" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">⚡</span>
+        核心更新速览
+        <span class="title-line"></span>
+      </h2>
+      <div class="highlights-grid" id="highlightsGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== RESONATORS ========== -->
+    <section id="resonators" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">👤</span>
+        新角色 / 复刻角色
+        <span class="title-line"></span>
+      </h2>
+
+      <!-- 新角色 -->
+      <h3 class="sub-section-title">
+        <span class="badge-new">NEW</span> 新角色
+      </h3>
+      <div class="resonator-cards" id="newResonators">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 自选复刻 -->
+      <h3 class="sub-section-title">
+        <span class="badge-special">SPECIAL</span> 忆旅唤取 — 自选复刻
+      </h3>
+      <div class="starpath-card" id="starpathCard">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 复刻角色 -->
+      <h3 class="sub-section-title">
+        <span class="badge-rerun">RERUN</span> 复刻角色
+      </h3>
+      <div class="resonator-cards rerun-cards" id="rerunResonators">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 未来角色 -->
+      <h3 class="sub-section-title">
+        <span class="badge-future">FUTURE</span> 未来版本前瞻角色
+      </h3>
+      <div class="resonator-cards future-cards" id="futureResonators">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 夏日皮肤 -->
+      <h3 class="sub-section-title">
+        <span class="badge-cosmetic">COSMETIC</span> 夏日皮肤
+      </h3>
+      <div class="skin-cards" id="skinCards">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== WEAPONS ========== -->
+    <section id="weapons" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">🗡️</span>
+        新武器 / 武器卡池
+        <span class="title-line"></span>
+      </h2>
+      <div class="weapon-cards" id="newWeapons">
+        <!-- JS 动态渲染 -->
+      </div>
+      <h3 class="sub-section-title">复刻武器</h3>
+      <div class="weapon-cards rerun-weapons" id="rerunWeapons">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== EVENTS ========== -->
+    <section id="events" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">🎪</span>
+        版本活动
+        <span class="title-line"></span>
+      </h2>
+      <div class="events-grid" id="eventsGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== STORY & MAP ========== -->
+    <section id="story" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">📖</span>
+        剧情和地图内容
+        <span class="title-line"></span>
+      </h2>
+
+      <!-- 主线剧情 -->
+      <h3 class="sub-section-title">主线剧情</h3>
+      <div class="story-timeline" id="mainStoryTimeline">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 新地图 -->
+      <h3 class="sub-section-title">🗺️ 全新地图 — 梦州·玄方地界</h3>
+      <div class="region-card" id="regionCard">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 探索机制 -->
+      <h3 class="sub-section-title">🔍 全新探索机制</h3>
+      <div class="explore-grid" id="exploreGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 新 BOSS -->
+      <h3 class="sub-section-title">👹 新 BOSS</h3>
+      <div class="boss-cards" id="bossCards">
+        <!-- JS 动态渲染 -->
+      </div>
+
+      <!-- 新声骸 -->
+      <h3 class="sub-section-title">💠 新声骸套装</h3>
+      <div class="echo-cards" id="echoCards">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== OPTIMIZATIONS ========== -->
+    <section id="optimizations" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">🔧</span>
+        系统优化
+        <span class="title-line"></span>
+      </h2>
+      <div class="optimization-grid" id="optimizationGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section id="timeline" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">📅</span>
+        重要时间节点
+        <span class="title-line"></span>
+      </h2>
+      <div class="timeline-container" id="timelineContainer">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- ========== SOURCES ========== -->
+    <section id="sources" class="section">
+      <h2 class="section-title">
+        <span class="title-icon">📚</span>
+        信息来源
+        <span class="title-line"></span>
+      </h2>
+      <div class="sources-content" id="sourcesContent">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="site-footer">
+    <p>本页面为非官方玩家整理版本前瞻内容。所有信息以 <a href="https://wutheringwaves.kurogames.com/" target="_blank" rel="noopener">鸣潮官方网站</a> 及游戏内公告为准。</p>
+    <p>© 2026 玩家整理 · 仅供信息参考</p>
+  </footer>
+
+  <!-- ========== 返回顶部按钮 ========== -->
+  <button id="btnBackToTop" class="btn-back-to-top" title="返回顶部" aria-label="返回顶部">
+    ▲
+  </button>
+
+  <!-- ========== 脚本 ========== -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
