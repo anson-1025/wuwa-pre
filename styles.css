@@ -1629,7 +1629,34 @@ main {
   padding: 0 1px;
 }
 
-/* 无结果 */
+/* 统一筛选隐藏 */
+.filtered-hidden {
+  display: none !important;
+}
+
+/* 全局空结果提示 */
+.no-results-global {
+  display: none;
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  line-height: 1.6;
+}
+
+.no-results-global::before {
+  content: "🔍 ";
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+/* 各区域空结果占位 */
 .no-results {
   padding: 20px;
   text-align: center;
